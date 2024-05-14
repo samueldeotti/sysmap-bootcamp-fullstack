@@ -5,7 +5,7 @@ albumApi.defaults.headers.common.Authorization = `Basic ${token}`;
 
 const getAlbums = async (search: string) => {
   try {
-    const resp = await albumApi.get(`/albums/all?searchText=${search}`)
+    const resp = await albumApi.get(`/albums/all?search=${search}`)
     return resp.data;
   } catch (error) {
     throw new Error('Erro ao buscar os álbuns');

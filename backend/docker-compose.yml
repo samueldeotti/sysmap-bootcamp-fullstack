@@ -21,7 +21,7 @@ services:
 
   bootcamp-user-api:
     build:
-      context: ../samuel-deotti-backend/app-user-api
+      context: ../backend/app-user-api
       dockerfile: ../app-user-api/Dockerfile
     ports:
       - 8081:8081
@@ -43,7 +43,7 @@ services:
 
   bootcamp-integration-api:
     build:
-      context: ../samuel-deotti-backend/app-integration-api
+      context: ../backend/app-integration-api
       dockerfile: ../app-integration-api/Dockerfile
     ports:
       - 8082:8082

@@ -41,7 +41,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, disabled, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    const isDisabled = disabled || variant === "disabled"; // Se a variante for 'disabled', também considera o botão como desabilitado
+    const isDisabled = disabled || variant as string === "disabled"; // Se a variante for 'disabled', também considera o botão como desabilitado
 
     return (
       <Comp
