@@ -1,10 +1,12 @@
 import Header from '@/components/Header/Header';
+import background from '../../assets/header_background.jpg'
+
 
 const { innerHeight } = window;
 
 export default function HeaderDashboard() {
   return (
-    <div className="bg-fundoHeader bg-center bg-cover bg-no-repeat relative overflow-hidden" style={ { height: innerHeight < 400 ? '100vh' : '50vh' } }>
+    <div className="bg-fundoHeader bg-center bg-cover bg-no-repeat relative overflow-hidden" style={{ height: innerHeight < 400 ? '100vh' : '50vh', backgroundImage: `url(${background})` }}>
       <div className="flex flex-col items-center h-full sm:gap-10 backdrop-brightness-50 relative">
         <Header />
         <div className="flex flex-col self-start ml-2 sm:ml-4 md:ml-6 lg:ml-10 gap-2 text-white w-4/5 absolute bottom-14 max-w-[560px]">
